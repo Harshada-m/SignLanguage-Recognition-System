@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<!--
+	Folio by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="contact">
+
+		<!-- Page Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header Wrapper -->
+					<div id="header-wrapper">
+								
+						<!-- Header -->
+							<div id="header" class="container">
+								
+								<!-- Logo -->
+								<div id="logo">
+									<h1><span>Sign</span>Life</h1>
+								</div>
+								
+								<!-- Nav -->
+								<nav id="nav">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li>
+											<span>Project</span>
+											<ul>
+												<li><a href="https://docs.google.com/presentation/d/1cZuaMEKvW-0MKjHMLS4eJGPvKGKvg4pFiIffzJPBS64/edit?usp=sharing">How it works?</a></li>
+												<li><a href="https://arxiv.org/pdf/1704.04861.pdf">Research Paper</a></li>
+												<li><a href="https://docs.google.com/document/d/1piczi1fi37SIOh8ZQkV0nllnLWbWyK7g/edit?usp=sharing&ouid=108667970750982230182&rtpof=true&sd=true">Project Report</a></li>
+											</ul>
+										</li>
+											<li class="active"><a href="contact.html">Contact</a></li>
+											<li><a href="about.html">About us</a></li>
+										</ul>
+									</nav>
+		
+							</div>
+		
+					</div>
+					
+				<!-- Main Wrapper -->
+					<div id="main-wrapper">
+		
+						<!-- Main -->
+							<div id="main" class="container">
+								<div class="row">
+								
+									<!-- Content -->
+										<div id="contact" class="12u">
+											<header>
+												<h2>Contact us</h2>
+											</header>
+											<form>
+											<section class="12u">
+													<div class="row 50%">
+														<div class="6u">
+															<input id="name" name="name" placeholder="Name" type="text" class="text" />
+														</div>
+														<div class="6u">
+															<input id="email" name="email" placeholder="Email" type="text" class="text" />
+														</div>
+													</div>
+													<div class="row 50%">
+														<div class="12u">
+															<textarea id="message" name="message" placeholder="Message"></textarea>
+														</div>
+													</div>
+													<div class="row">
+														<div class="12u">
+															<ul class="actions">
+																<!--<li><a href="#" class="button form-button-submit">Send Message</a></li>-->
+																<li> <button id="submit" class="button form-button-submit" >Send Message</button></li>
+															</ul>
+														</div>
+													</div>
+											</form>
+											</section>
+											
+										</div>
+										
+								</div>
+							</div>
+		
+					</div>
+		
+				<!-- Footer Wrapper -->
+				<div id="footer-wrapper" class="container">
+		
+					<!-- Footer -->
+						<div id="footer">
+							<ul class="contact">
+								<li><a href="#" class="fa fa-github"><span>Twitter</span></a></li>
+								<li><a href="mailto:atharva464@gmail.com" class="fa fa-envelope"><span>Email</span></a></li>
+							</ul>
+						</div>
+	
+					<!-- Copyright -->
+						<div id="copyright">
+							<span>&copy; SignLife. All rights reserved. &copy; 2021</span>
+						</div>
+				</div>
+			
+			</div>
+			
+	<script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyAYvGsVgvweKSMZr98GNIRdLZZAwQul8XA",
+
+    authDomain: "signlife-dfea1.firebaseapp.com",
+
+    projectId: "signlife-dfea1",
+
+    storageBucket: "signlife-dfea1.appspot.com",
+
+    messagingSenderId: "282626713732",
+
+    appId: "1:282626713732:web:d5e0be8252301f2b1b7ad1",
+
+    measurementId: "G-MTL85PV5VK"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+		
+  firebase.initializeApp(firebaseConfig);
+  const docRef = firebase.firestore();
+  //connecting html element
+  const fname = document.querySelector("#name");
+  const femail = document.querySelector("#email");
+  const fmessage = document.querySelector("#message");
+  const fsubmit = document.querySelector("#submit");
+		
+  fsubmit.addEventListener("click", function() {
+
+    if(!fname.value || !femail.value || !fmessage.value){
+      alert("Fill all the fields");
+    }else{
+      savemessages();
+    }
+    });
+		
+  function savemessages(){
+
+  docRef.collection("Messages").add(
+    {
+      rname: fname.value,
+      remail: femail.value,
+      rmessage: fmessage.value,
+
+    }
+    ).then(function(docRef){
+        console.log("Document written with ID -", docRef.id);
+        window.location.href='sent.html';
+      }
+    ).catch(function(error){
+        console.error("Error while adding document ", error);
+        window.location.href='failed.html';
+      })
+}
+</script>
+	</body>
+</html>
