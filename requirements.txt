@@ -1,0 +1,7 @@
+Jinja2==2.10.1
+numpy>=1.9.2
+Werkzeug==0.15.5
+numpy>=1.9.2
+gradio==2.7.5.2
+tensorflow==2.7.0
+OpenCV==3.4.16
