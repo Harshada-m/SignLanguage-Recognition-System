@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'SignLife'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F48DC0FDE9F748CC91EFEE929A450D24 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15FAB14FB4A243429EE1F78A6087AFB0 }}
